@@ -1,12 +1,57 @@
-.my-beautiful-extension {
-  transform: rotate(180deg);
-  border: 10px red solid;
+/*barra di ricerca*/
+.my-beautiful-extension .style-scope .ytd-searchbox{
+  opacity: 0;
+  display: none;
 }
 
-.my-beautiful-extension .rep-main-logo {
-  transform: rotate(180deg) !important;
+/*commenti*/
+.my-beautiful-extension .style-scope ytd-item-section-renderer{
+    display: none;
 }
 
-/* .my-beautiful-extension .logoRotated {
-  transform: rotate(180deg) !important;
-} */
+/*cancel autoplay*/
+.my-beautiful-extension .ytp-upnext-cancel{
+    display: none;
+}
+/*up next only */
+.my-beautiful-extension #items .ytd-watch-next-secondary-results-renderer:first-child{
+	transform: scale(1);
+}
+
+.my-beautiful-extension #items .ytd-watch-next-secondary-results-renderer:not(:first-child){
+	filter:blur(10px);
+    pointer-events: none;
+}
+/*homepage one video*/
+.my-beautiful-extension .style-scope .ytd-rich-grid-renderer:not(:first-child){
+	display: none;
+}
+
+/*menu chiuso*/
+.my-beautiful-extension .style-scope .ytd-mini-guide-renderer:first-child{
+	filter:blur(10px);
+    pointer-events: none;
+}
+.my-beautiful-extension .style-scope .ytd-mini-guide-renderer:not(:first-child){
+	filter:blur(10px);
+    pointer-events: none;
+}
+
+/*menu aperto*/
+.my-beautiful-extension .style-scope .ytd-guide-renderer:first-child{
+	filter:blur(10px);
+    pointer-events: none;
+}
+.my-beautiful-extension .style-scope .ytd-guide-renderer:not(:first-child){
+	filter:blur(10px);
+    pointer-events: none;
+}
+/*video homepage*/
+.my-beautiful-extension .style-scope .ytd-rich-grid-renderer:first-child{
+	transform: scale(1.21, 1.21) translate(50px, 25px); 
+    
+}
+.my-beautiful-extension .ytp-endscreen-content{
+	filter:blur(5px);
+    pointer-events: none;
+}
